@@ -67,12 +67,56 @@ public class ExampleUnitTest {
 
         HuffmanTree tree = new HuffmanTree();
         tree.createHuffmanTree(list);
-
         Traverse.showHuffman(tree.root);
-
-
         System.out.println(tree.getCode(treeNode2));
     }
 
 
+    /**
+     * 验证AVL树
+     */
+    int[] array8 = {3, 2, 1};
+    int[] array81 = {4, 5, 6, 7};
+    int[] array82 = {16, 15};
+    int[] array83 = {14,13};
+
+    int[] array85 = {12, 11, 10};
+    int[] array86 = {8, 9};
+
+
+    @Test
+    public void testAVL() {
+        AVLTree avlTree = new AVLTree();
+        for (int i = 0; i < array8.length; i++) {
+            avlTree.insert(array8[i]);
+        }
+        Traverse.showTree(avlTree.getRoot());
+        System.out.println("\n--------");
+        for (int i = 0; i < array81.length; i++) {
+            avlTree.insert(array81[i]);
+        }
+        Traverse.showTree(avlTree.getRoot());
+        System.out.println("\n--------");
+        for (int i = 0; i < array82.length; i++) {
+            avlTree.insert(array82[i]);
+        }
+        Traverse.showTree(avlTree.getRoot());
+
+        System.out.println("\n--------");
+        for (int i = 0; i < array83.length; i++) {
+            avlTree.insert(array83[i]);
+        }
+        Traverse.showTree(avlTree.getRoot());
+
+        System.out.println("\n--------");
+        for (int i = 0; i < array85.length; i++) {
+            avlTree.insert(array85[i]);
+        }
+        Traverse.showTree(avlTree.getRoot());
+        System.out.println("\n--------");
+        for (int i = 0; i < array86.length; i++) {
+            avlTree.insert(array86[i]);
+        }
+        Traverse.showTree(avlTree.getRoot());
+    }
 }

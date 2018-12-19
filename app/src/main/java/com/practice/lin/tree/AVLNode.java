@@ -6,8 +6,7 @@ package com.practice.lin.tree;
  *
  * @author lin
  */
-public class AVLNode<AnyType> {
-
+public class AVLNode<AnyType extends Comparable<? super AnyType>> {
 
     int height;
 

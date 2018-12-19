@@ -36,4 +36,22 @@ public class Traverse<AnyType extends Comparable<? super AnyType>> {
             }
         }
     }
+
+
+    public static <AnyType extends Comparable<? super AnyType>> void showTree(AVLNode<AnyType> root) {
+        LinkedList<AVLNode> list = new LinkedList<>();
+        list.offer(root);
+        while (!list.isEmpty()) {
+            AVLNode node = list.pop();
+            System.out.print(node.element + "   ");
+
+            if (node.left != null) {
+                list.offer(node.left);
+            }
+
+            if (node.right != null) {
+                list.offer(node.right);
+            }
+        }
+    }
 }
